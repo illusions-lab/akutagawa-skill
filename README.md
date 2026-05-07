@@ -1,6 +1,6 @@
 <div align="center">
 
-![og](repository-open-graph.png)
+
 
 
 # 芥川龍之介.skill
