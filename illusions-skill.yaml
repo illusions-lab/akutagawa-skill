@@ -14,7 +14,7 @@ homepage: https://iktahana.github.io/akutagawa-skill
 tier_1:
   name_ja: 芥川龍之介
   name_romaji: Akutagawa Ryūnosuke
-  tagline: 芥川龍之介の文章 DNA を、ひとつのプロンプトへと蒸留しました。
+  tagline: 芥川龍之介の文体DNAを、140KBのプロンプトへと蒸留しました。
   portrait: sources/portrait.jpg
   key_kanji: 鬼
 
