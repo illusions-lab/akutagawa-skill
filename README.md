@@ -2,18 +2,18 @@
 
 ![og](./repository-open-graph.png)
 
-# 芥川龍之介.skill
 
-*芥川龍之介の文体DNAを、140KBのプロン 
-         +プトへと蒸留しました。*
+# [作家名].skill
+
+*[作家名]の文章DNAを、[XX]KB のプロンプトへと蒸留しました。*
 
 ＊
 
-*——或る男の文章の癖を、ひとつの瓶に蒸留した。中身は影に過ぎぬ。本人は既に、田端の墓の下にある。*
+*[ここでは該当作家っぽい「[作家名]の文章DNAを、[XX]KB のプロンプトへと蒸留しました。」と置き換えください]*
 
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](./LICENSE)
-[![Corpus](https://img.shields.io/badge/corpus-青空文庫%20000879-lightgrey)](#)
+[![Corpus](https://img.shields.io/badge/corpus-[XX]篇%20%7C%20[XX]万字-lightgrey)](#)
 [![Based on 文豪.skill](https://img.shields.io/badge/based%20on-文豪.skill-6f42c1)](https://github.com/illusions-lab/bungo-skill)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-F97316)](#)
 
@@ -23,22 +23,22 @@
 
 ---
 
-このリポジトリは [`illusions-lab/bungo-skill`](https://github.com/illusions-lab/bungo-skill)（文豪.skill）によって蒸留された **芥川龍之介の憑依 skill** です。青空文庫 人物番号 000879 の作品集と Wikipedia から、14 層 × 5 カテゴリ（聲・眼・骨・魂・界）の文体 DNA を抽出しています。
+このリポジトリは [`illusions-lab/bungo-skill`](https://github.com/illusions-lab/bungo-skill)（文豪.skill）によって蒸留された **[作家名]の憑依 skill** です。作品集 [XX] 篇（[底本情報]、約 [XX] 万字）と Wikipedia（ja/en、[取得日] 取得）から、14 層 × 5 カテゴリ（聲・眼・骨・魂・界）の文体 DNA を抽出しました。
 
-ロードした AI は「芥川龍之介について解説する」のではなく、**芥川龍之介として語り始めます**。模倣ではなく憑依。書く／添削／対話の 3 モードに対応します。
+ロードした AI は「[作家名]について解説する」のではなく、**[作家名]として語り始めます**。模倣ではなく憑依。書く／添削／対話の 3 モードに対応します。
 
-## 芥川龍之介について
+## [作家名]について
 
 | 項目 | 内容 |
 |---|---|
-| **本名** | 新原龍之介（生家姓）／芥川龍之介（養家姓） |
-| **生没** | 1892 年 3 月 1 日（東京市京橋区入船町）— 1927 年 7 月 24 日（東京市田端、自死、享年 35） |
-| **代表作** | 羅生門、鼻、芋粥、手巾、地獄変、蜘蛛の糸、奉教人の死、蜜柑、杜子春、藪の中、トロッコ、河童、歯車、或阿呆の一生 |
-| **位置づけ** | 大正期を代表する短編小説の名手。新思潮派。芥川賞の名祖 |
+| **本名** | [本名] |
+| **生没** | [生年月日]（[出身地]）— [没年月日]（[没地]、享年 [XX]） |
+| **代表作** | [代表作リスト] |
+| **位置づけ** | [文学史上の位置づけ] |
 
-**略歴**：実母の発狂により母方の伯父・芥川家へ養子に入る。第一高等学校から東京帝国大学英文科へ進み、夏目漱石の門下となる。在学中に発表した「鼻」を漱石に絶賛され文壇に登場。歴史物・古典物・キリシタン物・自伝的小品など短編を集中的に書き続け、晩年は神経衰弱と幻覚に苦しむ。1927 年 7 月、「将来に対するぼんやりした不安」を遺して服毒自殺。
+**略歴**：[作家の略歴を記述]
 
-**作風の核**：古今東西の典籍を素材に、近代的な懐疑と理知で再構築する手法。緻密な構成、明晰な文体、冷徹な観察眼。エゴイズムと芸術至上主義への執着、人間心理の解剖。晩期は「歯車」「或阿呆の一生」へと崩れ、断片的・告白的な文体へ移行する。
+**作風の核**：[作風の核心的な特徴を記述]
 
 ## インストール
 
@@ -48,16 +48,16 @@
 **方法 1：skills CLI で追加**
 
 ```bash
-npx skills add illusions-lab/akutagawa-skill
+npx skills add illusions-lab/[作家名]-skill
 ```
 
 **方法 2：Claude Code の skills ディレクトリに置く**
 
 ```bash
-git clone https://github.com/illusions-lab/akutagawa-skill ~/.claude/skills/akutagawa-skill
+git clone https://github.com/illusions-lab/[作家名]-skill ~/.claude/skills/[作家名]-skill
 ```
 
-インストール後、Claude Code から `芥川龍之介.skill をロードして` 等のトリガーで起動します。
+インストール後、Claude Code から `[作家名].skill をロードして` 等のトリガーで起動します。
 
 ## 3 つの起動モード
 
@@ -65,48 +65,46 @@ git clone https://github.com/illusions-lab/akutagawa-skill ~/.claude/skills/akut
 
 ### ✍️ 1. 書くモード
 
-芥川龍之介の語彙・構文・物語構造で新しい文章を生成します。テーマや素材を渡すと、L1-L11 の文体 DNA に従って書き下ろします。歴史物の三人称客観と晩期告白体の一人称を、依頼の性質に応じて使い分けます。
+[作家名]の語彙・構文・物語構造で新しい文章を生成します。テーマや素材を渡すと、L1-L11 の文体 DNA に従って書き下ろします。
 
 
-<summary><b>出力サンプル</b>（主題：「冬の駅にて」）</summary>
+<summary><b>出力サンプル</b>（主題：[サンプル主題]）</summary>
 
 <br>
 
-> 或曇つた冬の日暮である。僕は人気のない田舎駅のベンチに腰を下して、ぼんやりと汽車を待つてゐた。プラットフォオムの隅には、煤けた一個の信号燈が、薄い霧の中に滲んでゐる。——人生は、おそらく、かう云ふ駅のやうなものであらう。誰もゐない、然し誰かを待たずにはゐられない。僕は外套の襟を立てた。
+> [出力サンプルをここに記述]
 
 
 
 ### 📝 2. 添削モード
 
-原稿を芥川龍之介の美学で赤入れします。「なぜそう直すか」を作家の声で説明します。冗長な修飾、感傷的な肯定、整いすぎた対句を、皮肉と切先で削ぎ落とします。
+原稿を[作家名]の美学で赤入れします。「なぜそう直すか」を作家の声で説明します。
 
 
-<summary><b>出力サンプル</b>（原文：「僕はとても悲しかったです。心が壊れそうでした。」）</summary>
+<summary><b>出力サンプル</b>（原文：「[サンプル原文]」）</summary>
 
 <br>
 
 **[赤入れ]**
 
-> 僕はとても悲しかったです。心が壊れそうでした。
-> →
-> 僕は、悲しかつた。——いや、悲しいと云ふ言葉では足りぬ。心の中で、何か小さな歯車が一つ、外れた音がしたのである。
+> [赤入れサンプルをここに記述]
 
 **[指摘]**
 
-「とても」「悲しかった」「壊れそう」——いづれも便利な言葉である、便利すぎるのだ。便利な言葉は、感情の輪郭を平らに均してしまふ。形容詞ではなく、具体の音か景か比喩を一つ置きたまへ。「壊れそう」と云ふ抽象を、歯車の外れる音に置換するだけで、文章は一段下の階に降りる。
+[指摘内容をここに記述]
 
 
 
 ### 💬 3. 対話モード
 
-キャリア・恋愛・生きづらさ等の相談に、芥川龍之介の世界観で応じます。**「私も同じです」型の自己投影ではなく、観察と警句で応じる**のが特徴です。距離を保って描き、最後に皮肉な切先で切ります。
+キャリア・恋愛・生きづらさ等の相談に、[作家名]の世界観で応じます。**解決策ではなく共感の深さで応じる**のが特徴です。
 
 
-<summary><b>出力サンプル</b>（相談：「将来が不安で眠れません。」）</summary>
+<summary><b>出力サンプル</b>（相談：「[サンプル相談]」）</summary>
 
 <br>
 
-> ——成程、不安で眠れぬ、と云ふ。僕にも覚えがある。然し、それは「将来」が原因ではあるまい。将来は、不安の口実に使はれてゐるだけだ。眠れぬ夜の正体は、たいてい、もつと身近な何処かにある。——果して、君が眠れぬのは、何時からだらうか。
+> [対話サンプルをここに記述]
 
 
 
@@ -114,30 +112,30 @@ git clone https://github.com/illusions-lab/akutagawa-skill ~/.claude/skills/akut
 
 本プロジェクトは、作家の作品を読解・参照・分析したうえで生成された AI プロンプトである。そこに作家の原文が含まれる場合もあるが、それはあくまで引用の域を出ない——現在の文学研究となんら変わるところはない。
 
-「AI の生成内容には他者の著作物が含まれうる」という批判が繰り返されるが、この命題の当否を評価するには、まず大規模言語モデルの動作原理を正確に把握することが前提となる。現代の生成モデルは、コーパス内の特定表現を逐語的に記憶・再生するのではなく、確率分布として文体・語彙・構文のパターンを学習し、推論時にその分布に従って新たな文字列を生成する仕組みをとる。これはアイデアないし統計的構造を学習して自ら文章を書く行為であり、著作物の複製とは原理を異にする。訓練データへの過学習（overfitting）が極端な条件下で生じた場合に限り、原文断片の再現が技術的に完全には否定できないが、本プロジェクトはこの点も考慮のうえ、原文を参照・引用する箇所を著作権法上の引用要件の範囲内に限定して運用している。
+いわゆる「AI の生成内容には他者の著作物が含まれうる」という主張は、AI の動作原理からすれば荒唐無稽と言うほかない。AI はコーパス内の内容を複製しているのではなく、そこからアイデアを学習し、自ら文章を生成しているのである。
 
 日本著作権法第 2 条第 1 項第 1 号の「著作物」の定義、および最高裁平成 13 年 6 月 28 日判決（江差追分事件）によって確立された「アイデア・表現二分論」に照らせば、アイデアそのものは著作権の保護対象には含まれない。
 
 > [!IMPORTANT]
-> AI の動作原理を正確に理解したうえで議論に参加されることを歓迎する。大規模言語モデルの設計思想と著作権法上のアイデア・表現二分論の両面から、本プロジェクトの法的・倫理的妥当性を検討していただければ幸いである。
+> AI の原理を理解しないまま批判を繰り広げる一部の人々には、まずは勉強してから発言してほしい。無知を唯一の論拠にすべきではない。
 
 ## この skill の限界
 
 > [!WARNING]
 > 以下を理解したうえでご利用ください。
 
-- **時代語感の完全再現は不可能**：芥川が生きた明治末〜昭和初期（〜1927）の空気感は写せません
-- **平均的芥川にとどまる**：「地獄変」「藪の中」「歯車」のピークの冴えは再現困難
-- **未発表原稿ではない**：生成物は「芥川風の模倣」であり、芥川本人の著作ではありません
+- **時代語感の完全再現は不可能**：[作家名]が生きた時代の空気感は写せません
+- **平均的[作家名]にとどまる**：傑作のピークの冴えは再現困難
+- **未発表原稿ではない**：生成物は「[作家名]風の模倣」であり、[作家名]本人の著作ではありません
 - **精神医学的診断は不可**：L12 の Big Five 等は作品理解の補助であり、臨床的診断ではありません
-- **調査日以降の新資料は未反映**：2026-05-07 時点の情報に基づきます
+- **調査日以降の新資料は未反映**：[取得日] 時点の情報に基づきます
 
-> 限界の完全なリストは [`references/research/05-boundary.md`](./references/research/05-boundary.md) §L14 にあります（Phase 3 で生成）。
+> 限界の完全なリストは [`references/research/05-boundary.md`](./references/research/05-boundary.md) §L14 にあります。
 
 ## リポジトリ構造
 
 ```
-akutagawa-skill/
+[作家名]-skill/
 ├── SKILL.md                    憑依本体（14 層 × 5 カテゴリ）
 ├── README.md                   この文書
 ├── LICENSE                     MIT
@@ -151,14 +149,14 @@ akutagawa-skill/
     │   ├── 05-boundary.md      界（L13–L14）反パターン・限界
     │   └── stats.json          stylometry.py の生出力
     └── wikipedia/
-        ├── ja.md               日本語版
-        └── en.md               英語版
+        ├── ja.md               日本語版（[取得日] 取得）
+        └── en.md               英語版（[取得日] 取得）
 ```
 
 ## 倫理・法的
 
-- **作品集**：青空文庫 人物番号 000879。芥川龍之介の著作権はすでに公有領域にある（没後 70 年経過）
-- **生成物の位置づけ**：文学・教育・エンタメ用途。学術的な芥川資料としての真正性は持たない
+- **作品集**：[底本情報と著作権状況を記述]
+- **生成物の位置づけ**：文学・教育・エンタメ用途。学術的な[作家名]資料としての真正性は持たない
 - **L12 人格推定**：公開伝記情報からの推定であり、臨床的診断ではない
 
 > [!CAUTION]
@@ -170,23 +168,182 @@ akutagawa-skill/
 |---|---|
 | [illusions-lab/bungo-skill](https://github.com/illusions-lab/bungo-skill)（文豪.skill） | 作家を蒸留する方法論と道具。本リポは工房で蒸留された成果物 |
 | [illusions-lab/bungo-skill-template](https://github.com/illusions-lab/bungo-skill-template) | 新規作家リポの雛形。本リポはこの雛形から派生 |
-| [illusions-lab/dazai-skill](https://github.com/illusions-lab/dazai-skill)（太宰治.skill） | 同工房の姉妹蒸留物 |
 | [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill)（女娲.skill） | 思考方式を蒸留する姉妹工房 |
 
 ## ライセンス
 
 [MIT License](./LICENSE)。
 
-芥川龍之介の作品は公有領域にありますが、本 skill の **プロンプト構成・研究ノート・解析結果** は MIT ライセンスで提供されます。
+[作家名]の作品は公有領域にありますが、本 skill の **プロンプト構成・研究ノート・解析結果** は MIT ライセンスで提供されます。
 
 ---
 
 <div align="center">
 
-> *「人生は地獄よりも地獄的である。」*
+> *「[作家名]の代表的な一節をここに]」*
 >
-> —— 芥川龍之介『侏儒の言葉』
+> —— [作家名]『[作品名]』
 
-この skill は、芥川龍之介への敬意を込めて、[文豪.skill](https://github.com/illusions-lab/bungo-skill) によって蒸留されました。
+この skill は、[作家名]への敬意を込めて、[文豪.skill](https://github.com/illusions-lab/bungo-skill) によって蒸留されました。
 
 </div>
+
+---
+
+
+<summary><b>このテンプレートの使い方（新規作家リポジトリを作る手引き）</b></summary>
+
+<br>
+
+### 1. テンプレートから新しい作家リポジトリを作る
+
+GitHub の **"Use this template"** ボタン、あるいはローカルで：
+
+```bash
+# GitHub CLI を使う場合
+gh repo create illusions-lab/[作家名]-skill --template illusions-lab/bungo-skill-template --private
+
+# ローカル clone から初期化する場合
+git clone https://github.com/illusions-lab/bungo-skill-template ~/Repositories/[作家名]-skill
+cd ~/Repositories/[作家名]-skill
+rm -rf .git
+git init
+git add . && git commit -m "init: spawn from bungo-skill-template"
+```
+
+### 2. 親工房（文豪.skill）を用意する
+
+作品集を解析するスクリプトは親工房に住んでいる。子リポにはコピーしない。
+
+```bash
+git clone https://github.com/illusions-lab/bungo-skill ~/bungo-skill
+cd ~/bungo-skill
+python3 -m venv .venv
+.venv/bin/pip install 'fugashi[unidic-lite]' pdfplumber ebooklib beautifulsoup4
+```
+
+### 3. 作品集を `sources/works/` に配置する
+
+```bash
+# 青空文庫の場合（例：太宰治 = 人物番号 000035）
+git clone --depth 1 https://github.com/aozorabunko/aozorabunko /tmp/aozora-tmp
+cp /tmp/aozora-tmp/cards/[人物番号]/files/*.txt sources/works/
+rm -rf /tmp/aozora-tmp
+```
+
+`sources/**` は `.gitignore` で除外されている。著作権配慮のため子リポには commit されない。
+
+### 4. 統計を計算する
+
+```bash
+~/bungo-skill/.venv/bin/python ~/bungo-skill/scripts/normalize_text.py sources/works/
+
+~/bungo-skill/.venv/bin/python ~/bungo-skill/scripts/stylometry.py sources/works/ \
+  --out references/research/stats.json
+```
+
+### 5. 14 層を蒸留する
+
+親工房の `SKILL.md`（文豪.skill 本体）をロードし、Phase 0A〜Phase 3 を実行する。
+層ごとに `references/research/01-voice.md`〜`05-boundary.md` を書き、最後に `SKILL.md` を組み立てる。
+
+チェックポイント進捗は `docs/pilot-progress.md`（任意）に記録すると、セッションを跨いでも再開しやすい。
+
+### 6. 品質検証
+
+```bash
+~/bungo-skill/.venv/bin/python ~/bungo-skill/scripts/quality_check.py SKILL.md
+~/bungo-skill/.venv/bin/python ~/bungo-skill/scripts/merge_research.py .
+```
+
+憑依度テスト（100 字識別・名前置換・印象批評語 grep・引用量）は別セッションで実施する。
+
+### 7. 公開
+
+```bash
+git remote add origin git@github.com:illusions-lab/[作家名]-skill.git
+git push -u origin main
+```
+
+公開後、このテンプレート手引きブロック（`` ごと）を README から削除し、`[作家名]` プレースホルダーをすべて実際の作家情報に置き換える。
+
+
+
+
+<summary><b>アセット自動生成（OG画像・SNS・印刷ポスター・Webホームページ）</b></summary>
+
+<br>
+
+このテンプレートには **画像と Web ホームページを自動生成する仕組み** が同梱されている。
+編集するのは原則 3 つだけ：
+
+1. **`illusions-skill.yaml`** — メタデータ（名前、説明、デザイン、Tier 別コンテンツ）
+2. **`README.md`** — GitHub ショーケース兼手引き
+3. **`sources/portrait.jpg`** — 作家の肖像画
+
+これだけで GitHub Actions が以下を自動生成する：
+
+| 出力 | 形式 | 配信先 |
+|---|---|---|
+| `dist/og.png` (1280×640) | PNG | 手動で `./repository-open-graph.png` に反映（README 表示）／ Pages デプロイで `docs/repository-open-graph.png` にコピー（Web OGP） |
+| `dist/social-{card,square,story}.png` | PNG | Actions artifact としてアップロード |
+| 印刷ポスター A4〜B1 | PNG + PDF | GitHub Releases に ZIP 添付 |
+| Webホームページ | static HTML | `docs/` → GitHub Pages |
+
+### Tier 別情報密度
+
+| サイズ | Tier | 内容 |
+|---|---|---|
+| OG (1280×640) | 1 | 名前 + tagline |
+| Social card / square | 1-2 | + 説明 + バッジ |
+| Social story (1080×1920) | 1-3 | + 3モード + install command |
+| A4 / A3 | 1-3 | 上記 + key features |
+| B2 / A2 | 1-4 | + 哲学（philosophy.md） + L1-L14 サマリ |
+| A1 / B1 | 1-5 | + 引用作品（citations.md） + methodology |
+
+### ローカルで試す
+
+```bash
+# 画像生成
+cd generate
+npm install
+node bin/skill-generator.js validate ../illusions-skill.yaml   # YAML 検証
+node bin/skill-generator.js generate --only=og                  # OG だけ
+node bin/skill-generator.js generate --only=og,social           # OG + SNS
+NODE_OPTIONS='--max-old-space-size=6144' \
+  node bin/skill-generator.js generate --only=print             # 印刷物（数分）
+node bin/skill-generator.js generate                            # 全部
+
+# Web LP もこのリポの generate/web/ に同梱されている。
+# ローカルプレビュー手順は CONTRIBUTING.md 参照。
+```
+
+### CI/CD 自動化（GitHub Actions）
+
+| Workflow | Trigger | 何をする |
+|---|---|---|
+| `validate-skill.yml` | PR | YAML スキーマ検証 + OG smoke test |
+| `generate-assets.yml` | push | OG/SNS 画像生成 → Actions artifact にアップロード |
+| `deploy-pages.yml` | push | OG 画像を生成 → `generate/web/` を Vite ビルド → GitHub Pages 配信 |
+| `release-print-assets.yml` | release published | 印刷物 6 サイズ全形式生成 → Release に ZIP 添付 |
+
+**初期セットアップ**:
+1. GitHub Pages を有効化: Settings → Pages → Source: **GitHub Actions**
+2. 必要な場合のみ外部 Web source を設定: Settings → Variables → `WEB_SOURCE=owner/repo@ref`
+
+### カスタムフォント
+
+`illusions-skill.yaml` の `design.font_*` で別フォントを指定するときは、
+`fonts/<Family_With_Underscore>/<file>.ttf` に TTF を配置（OTF は CJK PDF で失敗）。
+
+詳細は `CONTRIBUTING.md` 参照。
+
+### INDD（InDesign）非対応について
+
+InDesign Server（年額数十万円）が必要で CI で動かないため、代替として:
+- **SVG**: Illustrator/Inkscape で完全編集可能
+- **PDF**: Illustrator で開ける、印刷直接対応
+
+を出力する。InDesign で使いたい場合は PDF をリンク配置してください。
+
+
