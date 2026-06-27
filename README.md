@@ -190,3 +190,13 @@ akutagawa-skill/
 この skill は、芥川龍之介への敬意を込めて、[文豪.skill](https://github.com/illusions-lab/bungo-skill) によって蒸留されました。
 
 </div>
+
+
+<div align="right">
+  <a href="https://www.art.nihon-u.ac.jp/education/department/literature/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/illusions-lab/.github/refs/heads/main/images/NUArt_colored.svg">
+      <img src="https://raw.githubusercontent.com/illusions-lab/.github/refs/heads/main/images/NUArt.svg" height="64" alt="日本大学芸術学部">
+    </picture>
+  </a>
+</div>
